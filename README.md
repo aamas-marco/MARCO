@@ -10,11 +10,15 @@ This repository is the official implementation of Centralized Model and Explorat
 
 To install requirements:
 
-```setup
-pip install -r requirements.txt
+```
+cd docker
+bash build.sh
+cd ..
+git clone https://github.com/openai/multiagent-particle-envs.git
+cd multiagent-particle-envs
+pip install -e .
 ```
 
->📋  Describe how to set up the environment, e.g. pip/conda/docker commands, download datasets, etc...
 
 ## Training
 
