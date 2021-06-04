@@ -15,6 +15,7 @@ cd multiagent-particle-envs
 pip install -e .
 ```
 If any difficulties encourtered during building the docker container, consult https://github.com/oxwhirl/pymarl
+
 When building the container, mount to /home, for example
 ```
 singularity shell --nv --writable -H $HOME:/home sandbox_directory
@@ -35,3 +36,16 @@ Training MARCO with centralized exploration policy
 python3 /home/MARCO/src/main_switch_explore.py --config=vdn --env-config=sc2_switch_exp with central_explore=True beta3=3.0
 ```
 
+## Training for bridge tasks
+Training model-freee baseline:
+```
+python3 src/main_mpe.py --config=qmix --env-config=sc2_mpe_mf with mb=0 
+```
+Training MARCO without centralized exploration policy 
+```
+python3 src/main_mpe.py --config=qmix --env-config=sc2_mpe_mb with mb=1
+```
+Training MARCO with centralized exploration policy 
+```
+python3 src/main_mpe.py --config=qmix --env-config=sc2_mpe_mb with mb=2
+```
