@@ -23,32 +23,37 @@ singularity shell --nv --writable -H $HOME:/home sandbox_directory
 
 ## Training for switch tasks
 - when ```n_bridges=0```, switch task does not have bridge.
-Training model-freee baseline:
+
+- Training model-freee baseline:
 ```
 python3 /home/MARCO/src/main_switch_mf.py --config=vdn --env-config=sc2_switch_mf with n_bridges=3
 ``` 
-Training MARCO without centralized exploration policy 
+
+- Training MARCO without centralized exploration policy 
 ```
 python3 /home/MARCO/src/main_switch_mb.py --config=vdn --env-config=sc2_switch_mb
 ```
-Training MARCO with centralized exploration policy 
+
+- Training MARCO with centralized exploration policy 
 ```
 python3 /home/MARCO/src/main_switch_explore.py --config=vdn --env-config=sc2_switch_exp with central_explore=True beta3=3.0
 ```
 
 ## Training for mpe tasks
-Training model-freee baseline:
+- Training model-freee baseline:
 ```
 python3 src/main_mpe.py --config=qmix --env-config=sc2_mpe_mf with mb=0 
 ```
-Training MARCO without centralized exploration policy 
+
+- Training MARCO without centralized exploration policy 
 ```
 python3 src/main_mpe.py --config=qmix --env-config=sc2_mpe_mb with mb=1
 ```
-Training MARCO with centralized exploration policy 
+
+- Training MARCO with centralized exploration policy 
 ```
 python3 src/main_mpe.py --config=qmix --env-config=sc2_mpe_mb with mb=2
 ```
 
 ## Results 
-See results and saved models, see folder created during training. Results path is specificed by ```local_results_path```
+- See results and saved models, see folder created during training. Results path is specificed by ```local_results_path```
