@@ -3,13 +3,15 @@
 This repository is the official implementation of Centralized Model and Exploration for Multi-Agent RL. 
 The implementation is based on https://github.com/oxwhirl/pymarl
 ## Requirements
-
-To install requirements:
-
+- Install requirements for pymarl repo:
 ```
 cd docker
 bash build.sh
 cd ..
+```
+
+- Install requirements for the MPE enviornment: 
+```
 git clone https://github.com/openai/multiagent-particle-envs.git
 cd multiagent-particle-envs
 pip install -e .
