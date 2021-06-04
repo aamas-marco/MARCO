@@ -19,48 +19,23 @@ cd multiagent-particle-envs
 pip install -e .
 ```
 
-
-## Training
-
-To train the model(s) in the paper, run this command:
-
-```train
-python train.py --input-data <path_to_data> --alpha 10 --beta 20
+When building the container, mount to /home, for example
+```
+singularity shell --nv --writable -H $HOME:/home sandbox_directory
 ```
 
->📋  Describe how to train the models, with example commands on how to train the models in your paper, including the full training procedure and appropriate hyperparameters.
-
-## Evaluation
-
-To evaluate my model on ImageNet, run:
-
-```eval
-python eval.py --model-file mymodel.pth --benchmark imagenet
+## Training for switch tasks
+- use n_bridges=0, switch task does not have bridge.
+Training model-freee baseline:
+```
+python3 /home/MARCO/src/main_switch_mf.py --config=vdn --env-config=sc2_switch_mf with n_bridges=3
+``` 
+Training MARCO without centralized exploration policy 
+```
+python3 /home/MARCO/src/main_switch_mb.py --config=vdn --env-config=sc2_switch_mb
+```
+Training MARCO with centralized exploration policy 
+```
+python3 /home/MARCO/src/main_switch_explore.py --config=vdn --env-config=sc2_switch_exp with central_explore=True beta3=3.0
 ```
 
->📋  Describe how to evaluate the trained models on benchmarks reported in the paper, give commands that produce the results (section below).
-
-## Pre-trained Models
-
-You can download pretrained models here:
-
-- [My awesome model](https://drive.google.com/mymodel.pth) trained on ImageNet using parameters x,y,z. 
-
->📋  Give a link to where/how the pretrained models can be downloaded and how they were trained (if applicable).  Alternatively you can have an additional column in your results table with a link to the models.
-
-## Results
-
-Our model achieves the following performance on :
-
-### [Image Classification on ImageNet](https://paperswithcode.com/sota/image-classification-on-imagenet)
-
-| Model name         | Top 1 Accuracy  | Top 5 Accuracy |
-| ------------------ |---------------- | -------------- |
-| My awesome model   |     85%         |      95%       |
-
->📋  Include a table of results from your paper, and link back to the leaderboard for clarity and context. If your main result is a figure, include that figure and link to the command or notebook to reproduce it. 
-
-
-## Contributing
-
->📋  Pick a licence and describe how to contribute to your code repository. 
