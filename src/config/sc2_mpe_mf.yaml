@@ -1,0 +1,26 @@
+env: sc2
+
+use_tensorboard: True # Log results to tensorboard
+save_model: True # Save the models to disk
+
+
+test_greedy: True
+
+
+# mpe mf
+mb: 0
+id: 0
+ensemble: 1 
+local_results_path: "/home/MARCO/mpe_results"
+test_nepisode: 50
+test_interval: 5000
+log_interval: 5000
+runner_log_interval: 5000
+learner_log_interval: 5000
+save_model_interval: 5000
+t_max: 30000000
+target_update_interval: 200
+reward_type: "regression"
+directory: "mpe_mf_targetupdate200_test"
+prefix: "mfmpe"
+
