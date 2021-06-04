@@ -14,7 +14,7 @@ git clone https://github.com/openai/multiagent-particle-envs.git
 cd multiagent-particle-envs
 pip install -e .
 ```
-If any difficulties encourted during building docker container, consult https://github.com/oxwhirl/pymarl
+If any difficulties encourtered during building the docker container, consult https://github.com/oxwhirl/pymarl
 When building the container, mount to /home, for example
 ```
 singularity shell --nv --writable -H $HOME:/home sandbox_directory
