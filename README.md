@@ -49,5 +49,6 @@ Training MARCO with centralized exploration policy
 ```
 python3 src/main_mpe.py --config=qmix --env-config=sc2_mpe_mb with mb=2
 ```
-# Results
-See results folder created during training. Results path is specificed by ```local_results_path```
+
+## Results 
+See results and saved models, see folder created during training. Results path is specificed by ```local_results_path```
