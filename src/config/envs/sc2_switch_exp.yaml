@@ -34,15 +34,15 @@ t_max: 500000000
 prefix: "exptest2"
 
 # model based stuff
-sampling_timesteps: 1000
-relearn_interval: 5000
-max_samples: 100000
+sampling_timesteps: 10000
+relearn_interval: 50000
+max_samples: 500000
 reward_type: "category"
 ensemble: 5
 epsilon: 0.1
 
 # exploration stuff
 beta1: 0.0
-beta3: 0.5
-exp_train_interval: 10000
+beta3: 3.0
+exp_train_interval: 100000
 central_explore: True
