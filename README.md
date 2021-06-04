@@ -22,7 +22,7 @@ singularity shell --nv --writable -H $HOME:/home sandbox_directory
 ```
 
 ## Training for switch tasks
-- use n_bridges=0, switch task does not have bridge.
+- when n_bridges=0, switch task does not have bridge.
 Training model-freee baseline:
 ```
 python3 /home/MARCO/src/main_switch_mf.py --config=vdn --env-config=sc2_switch_mf with n_bridges=3
