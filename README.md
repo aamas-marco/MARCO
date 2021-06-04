@@ -7,11 +7,11 @@ The implementation is based on https://github.com/oxwhirl/pymarl
 ```
 cd docker
 bash build.sh
-cd ..
 ```
 
 - Install requirements for the MPE enviornment: 
 ```
+cd ..
 git clone https://github.com/openai/multiagent-particle-envs.git
 cd multiagent-particle-envs
 pip install -e .
