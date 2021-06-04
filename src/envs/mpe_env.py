@@ -103,7 +103,11 @@ def make_env(scenario_name, bridge=False, benchmark=False):
     # load scenario from script
     scenario = scenarios.load(scenario_name + ".py").Scenario()
     # create world
-    world = scenario.make_world(bridge=bridge)
+    try:
+        world = scenario.make_world(bridge=bridge)
+    except:
+        world = scenario.make_world()
+
     # world = scenario.make_world()
     # create multiagent environment
     if benchmark:
