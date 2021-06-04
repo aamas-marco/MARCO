@@ -58,4 +58,4 @@ python3 src/main_mpe.py --config=qmix --env-config=sc2_mpe_mb with mb=2
 ```
 
 ## Results 
-- See results and saved models, see folder created during training. Results path is specificed by ```local_results_path```
+- For results and saved models, see folder created during training. Results path is specificed by ```local_results_path```
