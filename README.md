@@ -1,10 +1,6 @@
->📋  A template README.md for code accompanying a Machine Learning paper
-
 # Centralized Model and Exploration for Multi-Agent RL
 
 This repository is the official implementation of Centralized Model and Exploration for Multi-Agent RL. 
-
->📋  Optional: include a graphic explaining your approach/main result, bibtex entry, link to demos, blog posts and tutorials
 
 ## Requirements
 
