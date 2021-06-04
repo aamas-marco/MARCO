@@ -1,0 +1,48 @@
+env: sc2
+
+use_tensorboard: True # Log results to tensorboard
+save_model: True # Save the models to disk
+
+
+test_greedy: True
+
+epsilon_anneal_time: 50000
+lr: 0.0001
+critic_lr: 0.0001
+batch_size_run: 1
+batch_size: 32
+target_update_interval: 200
+
+n_agents: 3
+n_switches: 1
+n_bridges: 3
+episode_limit: 0
+task: "switch"
+
+# experiment stuff
+use_baseline: False
+exploration: True
+local_results_path: "/home/MARCO/switch_results"
+test_nepisode: 50
+test_interval: 5000
+save_model_interval: 50000
+log_interval: 5000
+runner_log_interval: 5000
+learner_log_interval: 5000
+train_interval: 5000
+t_max: 500000000
+prefix: "exptest2"
+
+# model based stuff
+sampling_timesteps: 10000
+relearn_interval: 50000
+max_samples: 50000
+reward_type: "category"
+ensemble: 5
+epsilon: 0.1
+
+# exploration stuff
+beta1: 0.0
+beta3: 3.0
+exp_train_interval: 100000
+central_explore: True
