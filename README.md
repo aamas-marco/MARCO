@@ -36,7 +36,7 @@ Training MARCO with centralized exploration policy
 python3 /home/MARCO/src/main_switch_explore.py --config=vdn --env-config=sc2_switch_exp with central_explore=True beta3=3.0
 ```
 
-## Training for bridge tasks
+## Training for mpe tasks
 Training model-freee baseline:
 ```
 python3 src/main_mpe.py --config=qmix --env-config=sc2_mpe_mf with mb=0 
