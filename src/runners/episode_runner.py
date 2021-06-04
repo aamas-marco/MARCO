@@ -1,7 +1,7 @@
 from functools import partial
 from components.episode_buffer import EpisodeBatch
 import numpy as np
-
+from envs.mpe_env import make_env
 import math
 
 class EpisodeRunner:
@@ -11,7 +11,7 @@ class EpisodeRunner:
         self.logger = logger
         self.batch_size = 1
         self.mbenv = None
-        self.mfenv = None
+        self.mfenv = self.mfenv = make_env("simple_reference")
         self.env = self.mfenv
 
         self.episode_limit = 25
