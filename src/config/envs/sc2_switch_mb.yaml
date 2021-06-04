@@ -34,9 +34,9 @@ learner_log_interval: 5000
 train_interval: 5000
 t_max: 500000000
 
-sampling_timesteps: 5000
-relearn_interval: 0
-max_samples: 5000
+sampling_timesteps: 10000
+relearn_interval: 50000
+max_samples: 50000
 reward_type: "category"
 ensemble: 5
 epsilon: 0.1
